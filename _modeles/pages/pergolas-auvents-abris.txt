@@ -1,0 +1,45 @@
+@slug pergolas-auvents-abris
+@ordre 4
+@nom Pergolas, auvents & abris
+@titre Pergola, auvent et carport en bois sur mesure · Yvelines, Val-d'Oise | Mirabois Construction
+@description Pergolas, auvents d'entrée, carports et abris de jardin en bois massif local, dessinés sur mesure pour votre maison, dans les Yvelines, le Val-d'Oise et à Paris.
+@h1a Pergolas,
+@h1b auvents & abris
+@hero abri-voiture.webp|1600|1133|Abri voiture en bois massif avec ferme apparente|50% 45%
+@vignette abri-voiture-s.webp
+@bois_intro En extérieur, le Douglas, le chêne et le châtaignier, tous trois locaux, résistent bien et vieillissent avec élégance. Je propose aussi du bois de réemploi quand c'est possible.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Sur mesure,</span> pour votre maison</h2>
+        <p class="chapo">Pergola, auvent d'entrée, carport ou abri de jardin : des ouvrages en bois massif dessinés sur mesure pour s'accorder avec l'architecture de votre maison.</p>
+        <p>Une belle pergola ou un auvent réussi, c'est d'abord une question de proportions. Je dessine chaque ouvrage en fonction de votre façade, de l'orientation et de l'usage : se protéger du soleil, abriter une entrée, garer une voiture ou ranger le matériel de jardin.</p>
+        <p>Poteaux, jambes de force, assemblages apparents : le bois massif est travaillé avec soin, pour un rendu durable et élégant.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Pergolas adossées ou indépendantes</li>
+          <li>Auvents et marquises d'entrée en bois</li>
+          <li>Carports et abris voiture</li>
+          <li>Abris de jardin, bûchers et préaux</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/auvent-meuliere.webp" alt="Auvent en bois massif sur une façade en pierre meulière" width="1429" height="1600" loading="lazy" style="object-position: 50% 45%">
+      </div>
+    </div>
+    <div class="conteneur">
+      <div class="galerie">
+        <figure><img src="assets/img/auvent-console.webp" alt="Auvent en bois porté par des consoles" width="1200" height="1600" loading="lazy" style="object-position: 50% 40%"><figcaption>Auvent sur consoles bois</figcaption></figure>
+        <figure><img src="assets/img/abri-voiture.webp" alt="Abri voiture en bois massif avec ferme apparente" width="1600" height="1133" loading="lazy"><figcaption>Abri voiture, ferme apparente</figcaption></figure>
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Faut-il une autorisation pour une pergola ou un carport ?
+Cela dépend de la surface, de la présence d'une toiture et de votre commune : une déclaration préalable est souvent demandée, et les secteurs protégés ont leurs propres règles. Je vous aide à vérifier les démarches auprès de votre mairie.
+? Quel bois choisir pour une pergola ?
+Le Douglas, le chêne et le châtaignier sont des bois locaux qui résistent bien en extérieur. Le choix dépend de l'aspect souhaité et de votre budget : je vous conseille lors de la visite.
+? Peut-on couvrir une pergola ?
+Oui. Une pergola peut rester ouverte ou être couverte, selon l'usage que vous en ferez. La couverture se choisit en fonction de la maison et des règles d'urbanisme de votre commune.

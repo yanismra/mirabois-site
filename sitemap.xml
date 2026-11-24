@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mirabois.fr/</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
-  <url>
-    <loc>https://mirabois.fr/mentions-legales.html</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
+  <url><loc>https://mirabois.fr/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/charpente-traditionnelle.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/ossature-bois-extension.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/renovation-charpente-toiture.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/pergolas-auvents-abris.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/terrasses-garde-corps.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/isolation-bardage-bois.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mirabois.fr/mentions-legales.html</loc><lastmod>2026-11-24</lastmod></url>
 </urlset>

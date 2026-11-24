@@ -1,0 +1,39 @@
+@slug ossature-bois-extension
+@ordre 2
+@nom Ossature bois & extensions
+@titre Extension et ossature bois · Yvelines, Val-d'Oise, Paris | Mirabois Construction
+@description Extension de maison, surélévation et annexe en ossature bois, avec des isolants biosourcés et du bois local, dans les Yvelines, le Val-d'Oise et à Paris.
+@h1a Ossature bois
+@h1b & extensions
+@hero renovation-chalet.webp|1600|1200|Maison rénovée avec ossature et bardage bois|50% 45%
+@vignette renovation-chalet-s.webp
+@bois_intro Pour une ossature et son bardage, le Douglas et le châtaignier, deux essences locales, sont des choix naturels. J'utilise du bois de réemploi dès que c'est possible.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Agrandir</span> avec le bois</h2>
+        <p class="chapo">Une extension en ossature bois, c'est une construction saine, légère et rapide à mettre en œuvre, qui s'intègre avec élégance à votre maison.</p>
+        <p>Extension de plain-pied, surélévation ou annexe : je conçois l'ossature sur mesure, en tenant compte de l'architecture de votre maison et de son environnement. La construction bois est légère, ce qui limite les fondations, et le chantier reste propre, car une grande partie du travail est préparée à l'avance.</p>
+        <p>L'ossature se marie naturellement avec des isolants biosourcés, comme la fibre de bois, et avec un bardage en bois local. Chaque détail est soigné, de l'étanchéité à l'air jusqu'aux finitions.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Extensions de plain-pied</li>
+          <li>Surélévations en bois</li>
+          <li>Annexes, bureaux de jardin et dépendances</li>
+          <li>Isolation et bardage de l'extension</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/isolation-facade.webp" alt="Maison sous échafaudage pendant l'isolation et l'habillage bois" width="1600" height="902" loading="lazy" style="object-position: 40% 50%">
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Faut-il un permis de construire pour une extension ?
+En règle générale, une déclaration préalable suffit jusqu'à 20 m² créés, ou 40 m² dans une zone urbaine couverte par un plan local d'urbanisme (sous conditions). Au-delà, un permis de construire est nécessaire. Les règles varient selon les communes et les secteurs protégés : je vous aide à vérifier ce qui s'applique chez vous.
+? Une extension en bois est-elle durable ?
+Oui. Bien conçue et bien protégée de l'humidité, une ossature bois dure aussi longtemps qu'une construction traditionnelle. Le soin apporté aux détails (ventilation, pare-pluie, débords de toit) fait toute la différence.
+? Combien de temps dure le chantier ?
+Tout dépend de la taille du projet. Comme une grande partie du travail est préparée à l'avance, le temps passé chez vous est souvent plus court qu'avec une construction maçonnée. Je vous indique la durée prévue avec le devis.

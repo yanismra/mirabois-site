@@ -1,0 +1,39 @@
+@slug renovation-charpente-toiture
+@ordre 3
+@nom Rénovation & toiture
+@titre Rénovation de charpente et toiture · Yvelines, Val-d'Oise | Mirabois Construction
+@description Diagnostic, renforcement et restauration de charpentes anciennes, travaux de couverture et pose de fenêtres de toit dans les Yvelines, le Val-d'Oise et à Paris.
+@h1a Rénovation
+@h1b & toiture
+@hero couverture-bardeaux.webp|1600|1200|Couverture en bardeaux de bois en cours de rénovation|50% 50%
+@vignette couverture-bardeaux-s.webp
+@bois_intro Pour remplacer des pièces anciennes, je privilégie le chêne et le bois de réemploi, qui s'accordent avec les bois d'origine.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Restaurer</span> plutôt que remplacer</h2>
+        <p class="chapo">Une charpente ancienne mérite d'être comprise avant d'être réparée. Je diagnostique, renforce et restaure les charpentes existantes, et j'interviens sur la couverture et les ouvertures de toit.</p>
+        <p>Pièces affaiblies, déformations, traces d'humidité : après un examen attentif, je vous propose les réparations nécessaires, en conservant tout ce qui peut l'être. Remplacement de pièces, renforts, reprise d'assemblages : le travail est méticuleux, pour respecter le caractère de la maison.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Diagnostic et renforcement de charpentes anciennes</li>
+          <li>Remplacement de pièces abîmées</li>
+          <li>Travaux de couverture, dont les bardeaux de bois</li>
+          <li>Création d'ouvertures et pose de fenêtres de toit</li>
+          <li>Préparation des combles avant aménagement</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/pose-fenetre-toit.webp" alt="Pose d'une fenêtre de toit dans une couverture en rénovation" width="1307" height="1600" loading="lazy" style="object-position: 50% 60%">
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Comment savoir si ma charpente doit être rénovée ?
+Certains signes doivent alerter : une toiture qui se déforme, des traces d'humidité, des pièces fendues, de la sciure ou de petits trous dans le bois. Je viens examiner votre charpente et je vous dis franchement ce qui doit être fait, ou non.
+? Peut-on aménager des combles avec une charpente ancienne ?
+Souvent, oui. Une charpente traditionnelle laisse de l'espace sous la toiture ; il faut parfois la renforcer ou modifier certaines pièces. J'étudie la faisabilité avec vous.
+? Pouvez-vous créer une fenêtre de toit ?
+Oui : création de l'ouverture dans la charpente avec son renfort (le chevêtre), pose de la fenêtre et raccord avec la couverture.

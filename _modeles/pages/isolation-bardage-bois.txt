@@ -1,0 +1,39 @@
+@slug isolation-bardage-bois
+@ordre 6
+@nom Isolation & bardage
+@titre Isolation biosourcée et bardage bois · Yvelines, Val-d'Oise | Mirabois Construction
+@description Isolation des combles et des façades avec des isolants biosourcés, et bardage en bois local (Douglas, châtaignier), dans les Yvelines, le Val-d'Oise et à Paris.
+@h1a Isolation
+@h1b & bardage
+@hero isolation-combles.webp|1600|900|Isolation sous rampants avec frein-vapeur|50% 50%
+@vignette bardage-bois-s.webp
+@bois_intro Pour un bardage, le Douglas et le châtaignier, deux essences locales, conviennent très bien sans traitement chimique. Avec le temps, ils prennent une belle teinte grise naturelle.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Un confort</span> été comme hiver</h2>
+        <p class="chapo">Bien isoler sa maison, c'est gagner en confort toute l'année. J'isole combles et façades avec des isolants biosourcés autant que possible, et je pose des bardages en bois local.</p>
+        <p>Isolation des rampants, des combles perdus ou par l'extérieur : je vous conseille la solution la plus adaptée à votre maison. Je privilégie les isolants biosourcés, comme la fibre de bois, la ouate de cellulose ou le chanvre, qui protègent bien de la chaleur l'été et régulent l'humidité.</p>
+        <p>La pose est méticuleuse : isolant continu, frein-vapeur soigneusement raccordé, points délicats traités un par un. C'est ce soin qui fait la performance réelle d'une isolation.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Isolation des combles et des rampants</li>
+          <li>Isolation par l'extérieur</li>
+          <li>Bardage bois de façade</li>
+          <li>Sous-faces et débords de toit</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/bardage-bois.webp" alt="Bardage bois et sous-face de débord de toit" width="1200" height="1600" loading="lazy" style="object-position: 50% 30%">
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Pourquoi choisir un isolant biosourcé ?
+Les isolants d'origine végétale stockent du carbone, protègent bien de la chaleur en été et régulent l'humidité de la maison. Ce sont des matériaux sains et agréables à vivre.
+? Quel bois choisir pour un bardage ?
+Le Douglas et le châtaignier, deux essences locales, conviennent très bien au bardage sans traitement chimique. Avec le temps, le bois grise naturellement, ce qui fait partie de son charme.
+? Isoler par l'intérieur ou par l'extérieur ?
+L'isolation par l'extérieur supprime la plupart des ponts thermiques et ne réduit pas la surface habitable, mais elle change l'aspect de la façade. Selon votre maison et les règles de votre commune, je vous aide à choisir.

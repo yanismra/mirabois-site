@@ -54,6 +54,7 @@ const PHOTOS = [
   { cat: 'isolation', src: 'isolation-combles', txt: 'Isolation sous rampants et frein-vapeur' },
   { cat: 'isolation', src: 'bardage-bois', txt: 'Bardage bois et sous-face de débord' },
 ];
+if (document.getElementById('visionneuse')) { // uniquement sur l'accueil
 const dlg = document.getElementById('visionneuse');
 const dImg = document.getElementById('visionneuse-img');
 const dLeg = document.getElementById('visionneuse-legende');
@@ -82,8 +83,10 @@ dlg.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') montrer(courant - 1);
   if (e.key === 'ArrowRight') montrer(courant + 1);
 });
+}
 
 // ---------- Contact : formulaire pas à pas ----------
+if (document.getElementById('formulaire')) { // uniquement sur l'accueil
 // L'envoi passe par FormSubmit (gratuit, sans serveur) : la demande arrive
 // directement dans la boîte e-mail ci-dessous.
 const ADRESSE = 'mirabois.construction@gmail.com';
@@ -168,6 +171,7 @@ form.addEventListener('submit', async (e) => {
   }
 });
 afficherEtape(0, false);
+}
 
 // ---------- Parallaxe : les photos de fond défilent moins vite que la page ----------
 const calques = [...document.querySelectorAll('[data-parallaxe]')];

@@ -1,0 +1,45 @@
+@slug terrasses-garde-corps
+@ordre 5
+@nom Terrasses & garde-corps
+@titre Terrasse bois et garde-corps en bois local · Yvelines, Val-d'Oise | Mirabois Construction
+@description Terrasses en bois local (frêne, chêne, châtaignier, Douglas), coursives, escaliers extérieurs et garde-corps sur mesure dans les Yvelines, le Val-d'Oise et à Paris.
+@h1a Terrasses
+@h1b & garde-corps
+@hero terrasse-chalet.webp|1600|1200|Grande terrasse en bois sur poteaux avec garde-corps|50% 50%
+@vignette terrasse-chalet-s.webp
+@bois_intro Pour une terrasse, le frêne, le chêne et le châtaignier sont d'excellentes alternatives locales aux bois exotiques venus de loin.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Pensées</span> pour durer dehors</h2>
+        <p class="chapo">Terrasses en bois, coursives, escaliers extérieurs et garde-corps : des ouvrages pensés pour durer dehors, avec des bois locaux choisis pour leur résistance.</p>
+        <p>Une terrasse réussie se joue sous les lames : une structure bien ventilée, l'eau qui s'évacue, des fixations adaptées. Je soigne chaque détail pour que votre terrasse reste belle et saine pendant des années.</p>
+        <p>Pour les lames et la structure, je privilégie des essences locales, comme le frêne, le chêne, le châtaignier ou le Douglas, plutôt que des bois exotiques.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Terrasses sur plots ou sur poteaux</li>
+          <li>Terrasses surélevées et coursives</li>
+          <li>Escaliers extérieurs</li>
+          <li>Garde-corps en bois sur mesure</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/garde-corps.webp" alt="Garde-corps en bois à barreaudage, détail d'angle" width="1200" height="1600" loading="lazy" style="object-position: 50% 50%">
+      </div>
+    </div>
+    <div class="conteneur">
+      <div class="galerie">
+        <figure><img src="assets/img/coursive-couverte.webp" alt="Coursive couverte avec plafond et platelage en bois" width="1200" height="1600" loading="lazy" style="object-position: 50% 55%"><figcaption>Coursive couverte, plafond et platelage bois</figcaption></figure>
+        <figure><img src="assets/img/terrasse-chalet-s.webp" alt="Terrasse bois sur poteaux et son garde-corps" width="760" height="570" loading="lazy"><figcaption>Terrasse sur poteaux et garde-corps</figcaption></figure>
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Quel bois choisir pour une terrasse ?
+Le frêne, le chêne et le châtaignier sont d'excellentes alternatives locales aux bois exotiques. Chaque essence a son aspect et son prix : je vous les présente lors de la visite.
+? Une terrasse en bois demande-t-elle beaucoup d'entretien ?
+Un nettoyage par an suffit. Sans traitement, le bois prend en vieillissant une teinte grise argentée ; si vous préférez garder sa couleur d'origine, une huile peut être appliquée régulièrement.
+? Faut-il une autorisation pour construire une terrasse ?
+Une terrasse de plain-pied n'en demande généralement pas. Une terrasse surélevée peut nécessiter une déclaration préalable selon sa hauteur et sa surface : je vous aide à vérifier auprès de votre mairie.

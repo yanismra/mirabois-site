@@ -1,0 +1,45 @@
+@slug charpente-traditionnelle
+@ordre 1
+@nom Charpente traditionnelle
+@titre Charpente traditionnelle en bois massif · Yvelines, Val-d'Oise | Mirabois Construction
+@description Conception, taille et levage de charpentes traditionnelles en bois massif local (Douglas, chêne) dans les Yvelines, le Val-d'Oise et à Paris. Travail soigné, assurance décennale.
+@h1a Charpente
+@h1b traditionnelle
+@hero charpente-apparente.webp|1600|1078|Charpente apparente en bois massif : fermes et voligeage|50% 45%
+@vignette charpente-apparente-s.webp
+@bois_intro Pour une charpente, je privilégie les essences locales, Douglas et chêne en tête, et le bois de réemploi chaque fois que le projet le permet.
+=== contenu
+  <section class="section section-papier" aria-labelledby="titre-intro">
+    <div class="conteneur page-intro">
+      <div class="page-texte">
+        <h2 class="titre-duo" id="titre-intro"><span>Une charpente</span> taillée pour durer</h2>
+        <p class="chapo">Une charpente bien conçue traverse les générations. Je conçois, taille et lève des charpentes neuves en bois massif, avec le soin et la précision que demande ce métier.</p>
+        <p>Fermes, pannes, chevrons, entraits : chaque pièce est dessinée pour votre maison, puis taillée et ajustée avec méthode. Les assemblages sont réalisés dans les règles de l'art, pour une charpente solide, qu'elle reste apparente ou qu'elle soit cachée sous les combles.</p>
+        <p>Je travaille de façon méticuleuse, du relevé des mesures jusqu'au levage, et je reste votre seul interlocuteur du début à la fin du chantier.</p>
+        <h3>Ce que je réalise</h3>
+        <ul class="liste-or">
+          <li>Charpentes neuves pour maisons, extensions et dépendances</li>
+          <li>Charpentes apparentes et poutres décoratives</li>
+          <li>Fermes, pannes et chevrons sur mesure</li>
+          <li>Charpentes de préaux, abris et auvents</li>
+        </ul>
+      </div>
+      <div class="page-photo">
+        <img src="assets/img/charpente-fermes.webp" alt="Fermes de charpente traditionnelle en bois massif" width="1152" height="1440" loading="lazy" style="object-position: 50% 20%">
+      </div>
+    </div>
+    <div class="conteneur">
+      <div class="galerie">
+        <figure><img src="assets/img/hero-charpente.webp" alt="Levage d'une charpente neuve en bois" width="1280" height="1600" loading="lazy" style="object-position: 50% 35%"><figcaption>Levage d'une charpente neuve</figcaption></figure>
+        <figure><img src="assets/img/charpente-nb.webp" alt="Charpente en bois vue de l'intérieur, en noir et blanc" width="1600" height="898" loading="lazy"><figcaption>Le détail des assemblages</figcaption></figure>
+      </div>
+    </div>
+    <svg class="bord bord-pierre" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><use href="assets/img/bord.svg#bord-trace"/></svg>
+  </section>
+=== faq
+? Quelle différence entre une charpente traditionnelle et une charpente industrielle ?
+Une charpente industrielle est faite de petites pièces (fermettes) assemblées par des connecteurs métalliques, qui encombrent les combles. Une charpente traditionnelle, en pièces de bois massif, libère l'espace sous la toiture : les combles restent aménageables et la charpente peut rester apparente.
+? Quel bois choisir pour une charpente ?
+Le Douglas et le chêne sont deux excellents choix locaux. Je vous conseille l'essence la mieux adaptée à votre projet, à l'aspect souhaité et à votre budget, et je propose du bois de réemploi lorsque c'est possible.
+? Les travaux sont-ils assurés ?
+Oui. Mirabois Construction exerce au sein de la coopérative Alter-Bâtir : les travaux sont couverts par son assurance décennale auprès de SMA BTP.
