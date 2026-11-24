@@ -299,8 +299,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Téléphone */
 @media (max-width: 680px) {
   .hero { height: clamp(460px, 78vh, 640px); }
-  .hero-contenu { align-items: flex-start; text-align: left; }
-  .hero-slogan { justify-items: start; }
+  .hero-contenu { align-items: center; text-align: center; }
+  .hero-slogan { justify-items: center; }
+  /* Trait doré de part et d'autre de « Charpente » pour garder l'équilibre une fois centré */
+  .hero-slogan span:first-child { gap: .8rem; }
+  .hero-slogan span:first-child::before,
+  .hero-slogan span:first-child::after { content: ""; width: 28px; height: 2px; background: var(--or); }
   .pignon { left: auto; right: 8%; }
   .sf-onglets { border-left: 0; padding-left: 0; display: flex; overflow-x: auto; gap: .5rem; padding-bottom: .4rem; scrollbar-width: thin; }
   .sf-onglets button { flex: none; border: 1px solid var(--filet); padding: .55rem .9rem; border-radius: 999px; font-size: var(--t-xs); }
