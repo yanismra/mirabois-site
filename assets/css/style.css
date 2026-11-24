@@ -238,6 +238,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .formulaire input::placeholder, .formulaire textarea::placeholder { color: var(--clair-doux); }
 .formulaire input:focus, .formulaire textarea:focus { outline: none; border-bottom-color: var(--clair); }
 .formulaire textarea { min-height: 140px; resize: vertical; }
+/* Champ piège anti-robots : invisible et sans aucune largeur */
+.formulaire input.piege { position: absolute; width: 1px; height: 1px; padding: 0; border: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); opacity: 0; pointer-events: none; }
 .choix { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
 .choix label { display: flex; align-items: center; gap: .6rem; padding: .8rem .9rem; border: 1px solid var(--noyer); cursor: pointer; font-size: var(--t-s); }
 .choix label:has(input:checked) { background: var(--noyer); color: var(--clair); }
