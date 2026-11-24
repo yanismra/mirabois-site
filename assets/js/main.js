@@ -128,9 +128,12 @@ form.addEventListener('submit', async (e) => {
   btnSuiv.disabled = true;
   btnSuiv.textContent = 'Envoi en cours…';
   msg.textContent = '';
+  const delai = new AbortController();
+  const minuterie = setTimeout(() => delai.abort(), 30000); // au-delà de 30 s, on abandonne
   try {
     const rep = await fetch(ENVOI, {
       method: 'POST',
+      signal: delai.signal,
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         _subject: `Demande de devis : ${d.get('type')} (${d.get('nom')})`,
@@ -160,6 +163,7 @@ form.addEventListener('submit', async (e) => {
     btnSuiv.textContent = 'Envoyer ma demande';
     msg.textContent = `L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez directement à ${ADRESSE} ou appelez le 06 51 91 78 61.`;
   } finally {
+    clearTimeout(minuterie);
     envoiEnCours = false;
   }
 });
