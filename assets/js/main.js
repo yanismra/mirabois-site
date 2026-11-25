@@ -123,6 +123,44 @@ function etapeValide() {
   return true;
 }
 btnPrec.addEventListener('click', () => afficherEtape(etape - 1));
+
+// E-mail de confirmation envoyé au visiteur (texte simple : FormSubmit n'accepte pas la mise en page)
+function confirmation(d) {
+  const trait = '━━━━━━━━━━━━━━━━━━━━━━━━';
+  const ligne = (titre, valeur) => (valeur ? `   •  ${titre} : ${valeur}` : null);
+  const recap = [
+    ligne('Projet', d.get('type')),
+    ligne('Nature', d.get('nature')),
+    ligne('Commune', d.get('ville')),
+    ligne('Budget indiqué', d.get('budget')),
+  ].filter(Boolean).join('\n');
+  return [
+    `Bonjour ${d.get('nom')},`,
+    '',
+    'Merci pour votre confiance : votre demande est bien arrivée.',
+    '',
+    trait,
+    'VOTRE DEMANDE',
+    trait,
+    recap,
+    '',
+    trait,
+    'LA SUITE',
+    trait,
+    '   1.  Je vous recontacte, en général sous 48 heures, pour échanger sur votre projet.',
+    '   2.  Nous convenons ensemble d\'une visite pour voir les lieux et prendre les mesures.',
+    '   3.  Vous recevez un devis détaillé, poste par poste, avec le choix des bois expliqué.',
+    '',
+    'Une question d\'ici là ? Appelez-moi au 06 51 91 78 61 ou écrivez-moi à mirabois.construction@gmail.com.',
+    '',
+    'À très bientôt,',
+    '',
+    'Yanis Mira',
+    'Charpentier · Mirabois Construction',
+    'Charpente et construction bois · Yvelines, Val-d\'Oise, Paris',
+    '06 51 91 78 61  ·  https://mirabois.fr',
+  ].join('\n');
+}
 let envoiEnCours = false;
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -161,7 +199,7 @@ form.addEventListener('submit', async (e) => {
         _template: 'table',
         _captcha: 'false',
         _honey: d.get('_honey') || '',
-        _autoresponse: `Bonjour ${d.get('nom')},\n\nMerci pour votre demande concernant votre projet (${d.get('type').toLowerCase()}, ${d.get('nature').toLowerCase()}). Je l'ai bien reçue et je vous recontacte rapidement, en général sous 48 heures, pour en parler ensemble.\n\nÀ très bientôt,\n\nYanis Mira\nMirabois Construction · Charpente et construction bois\n06 51 91 78 61 · https://mirabois.fr`,
+        _autoresponse: confirmation(d),
         ...champs,
       }),
     });
