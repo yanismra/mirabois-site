@@ -89,7 +89,7 @@ dlg.addEventListener('keydown', (e) => {
 if (document.getElementById('formulaire')) { // uniquement sur l'accueil
 // L'envoi passe par EmailJS (gratuit jusqu'à 200 e-mails par mois), depuis contact@mirabois.fr (SMTP Infomaniak).
 // Deux modèles, réglés dans le tableau de bord EmailJS (sources dans _modeles/emails) :
-//  - template_demande      : la demande complète, envoyée à mirabois.construction@gmail.com
+//  - template_demande      : la demande complète, envoyée à contact@mirabois.fr
 //  - template_confirmation : la confirmation envoyée au visiteur
 const ADRESSE = 'contact@mirabois.fr'; // vraie boîte chez Infomaniak
 const EMAILJS = {
