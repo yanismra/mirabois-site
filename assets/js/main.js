@@ -91,7 +91,7 @@ if (document.getElementById('formulaire')) { // uniquement sur l'accueil
 // Deux modèles, réglés dans le tableau de bord EmailJS (sources dans _modeles/emails) :
 //  - template_demande      : la demande complète, envoyée à mirabois.construction@gmail.com
 //  - template_confirmation : la confirmation envoyée au visiteur
-const ADRESSE = 'mirabois.construction@gmail.com';
+const ADRESSE = 'contact@mirabois.fr'; // redirigée chez OVH vers mirabois.construction@gmail.com
 const EMAILJS = {
   api: 'https://api.emailjs.com/api/v1.0/email/send',
   service: 'service_mirabois',
