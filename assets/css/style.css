@@ -276,6 +276,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pied-bas { border-top: 1px solid rgba(255,255,255,.1); font-size: var(--t-xs); }
 .pied-bas .conteneur { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 2rem; padding-block: 1.2rem; }
 
+/* Bouton « retour en haut » : un losange or, comme les engagements */
+.haut {
+  position: fixed; z-index: 40;
+  right: max(22px, calc(env(safe-area-inset-right, 0px) + 14px));
+  bottom: max(22px, calc(env(safe-area-inset-bottom, 0px) + 14px));
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: var(--noyer); color: var(--or); border: 1px solid var(--or);
+  transform: rotate(45deg) translateY(12px); opacity: 0; visibility: hidden;
+  transition: opacity .3s, transform .3s, visibility .3s, background-color .2s, color .2s;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,.45);
+}
+.haut.visible { opacity: 1; visibility: visible; transform: rotate(45deg); }
+.haut:hover { background: var(--or); color: var(--noyer); }
+.haut svg { width: 22px; height: 22px; transform: rotate(-45deg); fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
 /* Pages savoir-faire */
 .hero-page { height: clamp(400px, 64vh, 580px); }
 .hero-page .hero-contenu { align-items: flex-start; text-align: left; gap: 1rem; padding-bottom: clamp(4.5rem, 9vw, 6.5rem); }

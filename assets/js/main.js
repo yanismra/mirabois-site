@@ -136,7 +136,7 @@ form.addEventListener('submit', async (e) => {
   const sujet = `Demande de devis : ${d.get('type')}, ${d.get('nature').toLowerCase()} (${d.get('nom')})`;
   const champs = {
     Nom: d.get('nom'),
-    'E-mail': d.get('email'),
+    email: d.get('email'), // ce nom exact permet à FormSubmit d'envoyer la confirmation au visiteur
     'Téléphone': d.get('tel') || '—',
     Commune: d.get('ville') || '—',
     'Neuf ou rénovation': d.get('nature'),
@@ -161,6 +161,7 @@ form.addEventListener('submit', async (e) => {
         _template: 'table',
         _captcha: 'false',
         _honey: d.get('_honey') || '',
+        _autoresponse: `Bonjour ${d.get('nom')},\n\nMerci pour votre demande concernant votre projet (${d.get('type').toLowerCase()}, ${d.get('nature').toLowerCase()}). Je l'ai bien reçue et je vous recontacte rapidement, en général sous 48 heures, pour en parler ensemble.\n\nÀ très bientôt,\n\nYanis Mira\nMirabois Construction · Charpente et construction bois\n06 51 91 78 61 · https://mirabois.fr`,
         ...champs,
       }),
     });
@@ -193,6 +194,19 @@ form.addEventListener('submit', async (e) => {
   }
 });
 afficherEtape(0, false);
+}
+
+// ---------- Bouton « retour en haut » ----------
+const haut = document.querySelector('.haut');
+if (haut) {
+  const majHaut = () => haut.classList.toggle('visible', window.scrollY > 700);
+  window.addEventListener('scroll', majHaut, { passive: true });
+  majHaut();
+  haut.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0 });
+    document.querySelector('.logo')?.focus({ preventScroll: true });
+  });
 }
 
 // ---------- Parallaxe : les photos de fond défilent moins vite que la page ----------
