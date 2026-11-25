@@ -245,26 +245,44 @@
           <input id="ville" name="ville" autocomplete="address-level2" placeholder="Commune">
         </fieldset>
         <fieldset class="etape-form" data-etape="4" hidden>
-          <legend>Quel type de projet ?</legend>
+          <legend>S'agit-il de neuf ou de rénovation ?</legend>
           <div class="choix">
-            <label><input type="radio" id="type-1" name="type" value="Charpente" checked> Charpente</label>
-            <label><input type="radio" id="type-2" name="type" value="Ossature bois / extension"> Ossature &amp; extension</label>
-            <label><input type="radio" id="type-3" name="type" value="Rénovation / toiture"> Rénovation &amp; toiture</label>
-            <label><input type="radio" id="type-4" name="type" value="Pergola / auvent / abri"> Pergola, auvent, abri</label>
-            <label><input type="radio" id="type-5" name="type" value="Terrasse / garde-corps"> Terrasse &amp; garde-corps</label>
-            <label><input type="radio" id="type-6" name="type" value="Isolation / bardage"> Isolation &amp; bardage</label>
+            <label><input type="radio" id="nature-1" name="nature" value="Construction neuve" required> Construction neuve</label>
+            <label><input type="radio" id="nature-2" name="nature" value="Rénovation / restauration"> Rénovation, restauration</label>
           </div>
         </fieldset>
         <fieldset class="etape-form" data-etape="5" hidden>
+          <legend>Quel type de projet ?</legend>
+          <div class="choix">
+            <label><input type="radio" id="type-1" name="type" value="Charpente" required> Charpente</label>
+            <label><input type="radio" id="type-2" name="type" value="Ossature bois / extension"> Ossature &amp; extension</label>
+            <label><input type="radio" id="type-3" name="type" value="Pergola / auvent / abri"> Pergola, auvent, abri</label>
+            <label><input type="radio" id="type-4" name="type" value="Terrasse / garde-corps"> Terrasse &amp; garde-corps</label>
+            <label><input type="radio" id="type-5" name="type" value="Isolation / bardage"> Isolation &amp; bardage</label>
+          </div>
+        </fieldset>
+        <fieldset class="etape-form" data-etape="6" hidden>
           <legend>Décrivez votre projet</legend>
           <label class="sr" for="message">Votre projet</label>
           <textarea id="message" name="message" placeholder="Dimensions, état actuel, délais souhaités…" required></textarea>
+        </fieldset>
+        <fieldset class="etape-form" data-etape="7" hidden>
+          <legend>Quel est votre budget, approximativement ?</legend>
+          <p class="aide">Une simple fourchette suffit : elle m'aide à vous proposer une solution adaptée.</p>
+          <div class="choix">
+            <label><input type="radio" id="budget-1" name="budget" value="Moins de 5 000 €" required> Moins de 5 000 €</label>
+            <label><input type="radio" id="budget-2" name="budget" value="5 000 à 15 000 €"> 5 000 à 15 000 €</label>
+            <label><input type="radio" id="budget-3" name="budget" value="15 000 à 30 000 €"> 15 000 à 30 000 €</label>
+            <label><input type="radio" id="budget-4" name="budget" value="30 000 à 60 000 €"> 30 000 à 60 000 €</label>
+            <label><input type="radio" id="budget-5" name="budget" value="Plus de 60 000 €"> Plus de 60 000 €</label>
+            <label><input type="radio" id="budget-6" name="budget" value="Je ne sais pas encore"> Je ne sais pas encore</label>
+          </div>
         </fieldset>
         <!-- Piège à robots : champ invisible, laissé vide par les vrais visiteurs -->
         <input class="piege" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-pied">
           <button class="form-btn" type="button" id="precedent" hidden>← Retour</button>
-          <span class="compteur" id="compteur" aria-live="polite">1 / 5</span>
+          <span class="compteur" id="compteur" aria-live="polite">1 / 7</span>
           <button class="bouton bouton-fonce" type="submit" id="suivant">Suivant →</button>
         </div>
         <p class="formulaire-message" id="formulaire-message" role="status"></p>

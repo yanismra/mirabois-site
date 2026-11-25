@@ -112,9 +112,11 @@ function etapeValide() {
   const champs = [...etapes[etape].querySelectorAll('input, textarea')];
   const invalide = champs.find((c) => !c.checkValidity());
   if (invalide) {
-    msg.textContent = invalide.type === 'email' && invalide.value
-      ? "Cette adresse e-mail ne semble pas complète. Vérifiez-la pour que je puisse vous répondre."
-      : 'Ce champ est nécessaire pour vous répondre.';
+    msg.textContent = invalide.type === 'radio'
+      ? 'Choisissez une réponse pour continuer.'
+      : invalide.type === 'email' && invalide.value
+        ? "Cette adresse e-mail ne semble pas complète. Vérifiez-la pour que je puisse vous répondre."
+        : 'Ce champ est nécessaire pour vous répondre.';
     invalide.focus();
     return false;
   }
@@ -139,7 +141,7 @@ form.addEventListener('submit', async (e) => {
       signal: delai.signal,
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        _subject: `Demande de devis : ${d.get('type')} (${d.get('nom')})`,
+        _subject: `Demande de devis : ${d.get('type')}, ${d.get('nature').toLowerCase()} (${d.get('nom')})`,
         _replyto: d.get('email'),
         _template: 'table',
         _captcha: 'false',
@@ -148,8 +150,10 @@ form.addEventListener('submit', async (e) => {
         'E-mail': d.get('email'),
         'Téléphone': d.get('tel') || '—',
         Commune: d.get('ville') || '—',
+        'Neuf ou rénovation': d.get('nature'),
         Projet: d.get('type'),
         Message: d.get('message'),
+        'Budget approximatif': d.get('budget'),
       }),
     });
     const res = await rep.json().catch(() => ({}));
