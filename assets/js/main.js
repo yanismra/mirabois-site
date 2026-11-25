@@ -121,7 +121,7 @@ function etapeValide() {
     msg.textContent = invalide.type === 'radio'
       ? 'Choisissez une réponse pour continuer.'
       : invalide.type === 'email' && invalide.value
-        ? "Cette adresse e-mail ne semble pas complète. Vérifiez-la pour que je puisse vous répondre."
+        ? "Cette adresse e-mail ne semble pas complète. Vérifiez-la pour que nous puissions vous répondre."
         : 'Ce champ est nécessaire pour vous répondre.';
     invalide.focus();
     return false;
@@ -181,7 +181,7 @@ form.addEventListener('submit', async (e) => {
     // Confirmation : on remplace le formulaire par un message de remerciement
     etapes.forEach((f) => { f.hidden = true; });
     form.querySelector('.form-pied').hidden = true;
-    msg.textContent = `Merci ${d.get('nom')} ! Votre demande est bien envoyée. Je vous réponds rapidement, en général sous 48 heures.`;
+    msg.textContent = `Merci ${d.get('nom')} ! Votre demande est bien envoyée. Nous vous répondrons rapidement, si possible sous 48 heures, pour échanger sur votre projet. Le devis vient ensuite, après la visite sur place. Un e-mail de confirmation vient de vous être envoyé (pensez à vérifier vos courriers indésirables).`;
     msg.classList.add('envoye');
     msg.tabIndex = -1;
     msg.focus();

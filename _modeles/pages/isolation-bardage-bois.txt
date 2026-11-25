@@ -13,10 +13,10 @@
     <div class="conteneur page-intro">
       <div class="page-texte">
         <h2 class="titre-duo" id="titre-intro"><span>Un confort</span> été comme hiver</h2>
-        <p class="chapo">Bien isoler sa maison, c'est gagner en confort toute l'année. J'isole combles et façades avec des isolants biosourcés autant que possible, et je pose des bardages en bois local.</p>
-        <p>Isolation des rampants, des combles perdus ou par l'extérieur : je vous conseille la solution la plus adaptée à votre maison. Je privilégie les isolants biosourcés, comme la fibre de bois, la ouate de cellulose ou le chanvre, qui protègent bien de la chaleur l'été et régulent l'humidité.</p>
+        <p class="chapo">Bien isoler sa maison, c'est gagner en confort toute l'année. Nous isolons combles et façades avec des isolants biosourcés autant que possible, et posons des bardages en bois local.</p>
+        <p>Isolation des rampants, des combles perdus ou par l'extérieur : nous vous conseillons la solution la plus adaptée à votre maison. Nous privilégions les isolants biosourcés, comme la fibre de bois, la ouate de cellulose ou le chanvre, qui protègent bien de la chaleur l'été et régulent l'humidité.</p>
         <p>La pose est méticuleuse : isolant continu, frein-vapeur soigneusement raccordé, points délicats traités un par un. C'est ce soin qui fait la performance réelle d'une isolation.</p>
-        <h3>Ce que je réalise</h3>
+        <h3>Ce que nous réalisons</h3>
         <ul class="liste-or">
           <li>Isolation des combles et des rampants</li>
           <li>Isolation par l'extérieur</li>
@@ -36,4 +36,4 @@ Les isolants d'origine végétale stockent du carbone, protègent bien de la cha
 ? Quel bois choisir pour un bardage ?
 Le Douglas et le châtaignier, deux essences locales, conviennent très bien au bardage sans traitement chimique. Avec le temps, le bois grise naturellement, ce qui fait partie de son charme.
 ? Isoler par l'intérieur ou par l'extérieur ?
-L'isolation par l'extérieur supprime la plupart des ponts thermiques et ne réduit pas la surface habitable, mais elle change l'aspect de la façade. Selon votre maison et les règles de votre commune, je vous aide à choisir.
+L'isolation par l'extérieur supprime la plupart des ponts thermiques et ne réduit pas la surface habitable, mais elle change l'aspect de la façade. Selon votre maison et les règles de votre commune, nous vous aidons à choisir.

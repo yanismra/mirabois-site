@@ -14,9 +14,9 @@
       <div class="page-texte">
         <h2 class="titre-duo" id="titre-intro"><span>Pensées</span> pour durer dehors</h2>
         <p class="chapo">Terrasses en bois, coursives, escaliers extérieurs et garde-corps : des ouvrages pensés pour durer dehors, avec des bois locaux choisis pour leur résistance.</p>
-        <p>Une terrasse réussie se joue sous les lames : une structure bien ventilée, l'eau qui s'évacue, des fixations adaptées. Je soigne chaque détail pour que votre terrasse reste belle et saine pendant des années.</p>
-        <p>Pour les lames et la structure, je privilégie des essences locales, comme le frêne, le chêne, le châtaignier ou le Douglas, plutôt que des bois exotiques.</p>
-        <h3>Ce que je réalise</h3>
+        <p>Une terrasse réussie se joue sous les lames : une structure bien ventilée, l'eau qui s'évacue, des fixations adaptées. Nous soignons chaque détail pour que votre terrasse reste belle et saine pendant des années.</p>
+        <p>Pour les lames et la structure, nous privilégions des essences locales, comme le frêne, le chêne, le châtaignier ou le Douglas, plutôt que des bois exotiques.</p>
+        <h3>Ce que nous réalisons</h3>
         <ul class="liste-or">
           <li>Terrasses sur plots ou sur poteaux</li>
           <li>Terrasses surélevées et coursives</li>
@@ -38,8 +38,8 @@
   </section>
 === faq
 ? Quel bois choisir pour une terrasse ?
-Le frêne, le chêne et le châtaignier sont d'excellentes alternatives locales aux bois exotiques. Chaque essence a son aspect et son prix : je vous les présente lors de la visite.
+Le frêne, le chêne et le châtaignier sont d'excellentes alternatives locales aux bois exotiques. Chaque essence a son aspect et son prix : nous vous les présentons lors de la visite.
 ? Une terrasse en bois demande-t-elle beaucoup d'entretien ?
 Un nettoyage par an suffit. Sans traitement, le bois prend en vieillissant une teinte grise argentée ; si vous préférez garder sa couleur d'origine, une huile peut être appliquée régulièrement.
 ? Faut-il une autorisation pour construire une terrasse ?
-Une terrasse de plain-pied n'en demande généralement pas. Une terrasse surélevée peut nécessiter une déclaration préalable selon sa hauteur et sa surface : je vous aide à vérifier auprès de votre mairie.
+Une terrasse de plain-pied n'en demande généralement pas. Une terrasse surélevée peut nécessiter une déclaration préalable selon sa hauteur et sa surface : nous vous aidons à vérifier auprès de votre mairie.

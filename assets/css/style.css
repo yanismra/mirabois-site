@@ -266,7 +266,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Pied de page */
 .pied { background: var(--noyer); color: var(--clair-doux); font-size: var(--t-s); }
-.pied-grille { display: grid; grid-template-columns: 1fr 1fr .9fr 1.2fr; gap: 2.5rem; padding-block: 3.5rem; }
+.pied-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; padding-block: 3.5rem; }
 .pied-bloc { display: grid; gap: .9rem; align-content: start; min-width: 0; }
 .pied-bloc strong { color: var(--clair); font-weight: 500; display: block; }
 .pied a { color: var(--clair); }
