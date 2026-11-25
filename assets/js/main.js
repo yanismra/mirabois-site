@@ -87,14 +87,14 @@ dlg.addEventListener('keydown', (e) => {
 
 // ---------- Contact : formulaire pas à pas ----------
 if (document.getElementById('formulaire')) { // uniquement sur l'accueil
-// L'envoi passe par EmailJS (gratuit jusqu'à 200 e-mails par mois), depuis le Gmail de Mirabois.
+// L'envoi passe par EmailJS (gratuit jusqu'à 200 e-mails par mois), depuis contact@mirabois.fr (SMTP Infomaniak).
 // Deux modèles, réglés dans le tableau de bord EmailJS (sources dans _modeles/emails) :
 //  - template_demande      : la demande complète, envoyée à mirabois.construction@gmail.com
 //  - template_confirmation : la confirmation envoyée au visiteur
-const ADRESSE = 'contact@mirabois.fr'; // redirigée chez OVH vers mirabois.construction@gmail.com
+const ADRESSE = 'contact@mirabois.fr'; // vraie boîte chez Infomaniak
 const EMAILJS = {
   api: 'https://api.emailjs.com/api/v1.0/email/send',
-  service: 'service_mirabois',
+  service: 'service_contact',
   cle: 't3TgFdujsz0QfTNZE', // clé publique : elle est faite pour être visible dans le site
 };
 const form = document.getElementById('formulaire');
