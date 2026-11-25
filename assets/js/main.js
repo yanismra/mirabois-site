@@ -199,7 +199,7 @@ afficherEtape(0, false);
 // ---------- Bouton « retour en haut » ----------
 const haut = document.querySelector('.haut');
 if (haut) {
-  const majHaut = () => haut.classList.toggle('visible', window.scrollY > 700);
+  const majHaut = () => haut.classList.toggle('visible', window.scrollY > 150);
   window.addEventListener('scroll', majHaut, { passive: true });
   majHaut();
   haut.addEventListener('click', (e) => {
