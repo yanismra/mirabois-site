@@ -133,27 +133,35 @@ form.addEventListener('submit', async (e) => {
   btnSuiv.disabled = true;
   btnSuiv.textContent = 'Envoi en cours…';
   msg.textContent = '';
+  const sujet = `Demande de devis : ${d.get('type')}, ${d.get('nature').toLowerCase()} (${d.get('nom')})`;
+  const champs = {
+    Nom: d.get('nom'),
+    'E-mail': d.get('email'),
+    'Téléphone': d.get('tel') || '—',
+    Commune: d.get('ville') || '—',
+    'Neuf ou rénovation': d.get('nature'),
+    Projet: d.get('type'),
+    Message: d.get('message'),
+    'Budget approximatif': d.get('budget'),
+  };
+  // Le service d'envoi peut mettre 20 à 40 secondes : on rassure le visiteur et on patiente jusqu'à 90 s
+  const patience = setTimeout(() => {
+    msg.textContent = "Envoi en cours, merci de patienter : cela peut prendre jusqu'à une minute. Ne fermez pas la page.";
+  }, 4000);
   const delai = new AbortController();
-  const minuterie = setTimeout(() => delai.abort(), 30000); // au-delà de 30 s, on abandonne
+  const minuterie = setTimeout(() => delai.abort(), 90000);
   try {
     const rep = await fetch(ENVOI, {
       method: 'POST',
       signal: delai.signal,
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        _subject: `Demande de devis : ${d.get('type')}, ${d.get('nature').toLowerCase()} (${d.get('nom')})`,
+        _subject: sujet,
         _replyto: d.get('email'),
         _template: 'table',
         _captcha: 'false',
         _honey: d.get('_honey') || '',
-        Nom: d.get('nom'),
-        'E-mail': d.get('email'),
-        'Téléphone': d.get('tel') || '—',
-        Commune: d.get('ville') || '—',
-        'Neuf ou rénovation': d.get('nature'),
-        Projet: d.get('type'),
-        Message: d.get('message'),
-        'Budget approximatif': d.get('budget'),
+        ...champs,
       }),
     });
     const res = await rep.json().catch(() => ({}));
@@ -167,9 +175,19 @@ form.addEventListener('submit', async (e) => {
     msg.focus();
   } catch (err) {
     btnSuiv.disabled = false;
-    btnSuiv.textContent = 'Envoyer ma demande';
-    msg.textContent = `L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez directement à ${ADRESSE} ou appelez le 06 51 91 78 61.`;
+    btnSuiv.textContent = 'Réessayer';
+    // Solution de secours : la demande déjà remplie s'ouvre dans la messagerie du visiteur
+    const corps = Object.entries(champs).map(([k, v]) => `${k} : ${v}`).join('\n');
+    const lien = document.createElement('a');
+    lien.href = `mailto:${ADRESSE}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+    lien.textContent = 'envoyez votre demande par e-mail en un clic';
+    msg.replaceChildren(
+      "L'envoi n'a pas abouti. Réessayez, ou ",
+      lien,
+      ' (elle est déjà remplie), ou appelez le 06 51 91 78 61.'
+    );
   } finally {
+    clearTimeout(patience);
     clearTimeout(minuterie);
     envoiEnCours = false;
   }
