@@ -87,10 +87,16 @@ dlg.addEventListener('keydown', (e) => {
 
 // ---------- Contact : formulaire pas à pas ----------
 if (document.getElementById('formulaire')) { // uniquement sur l'accueil
-// L'envoi passe par FormSubmit (gratuit, sans serveur) : la demande arrive
-// directement dans la boîte e-mail ci-dessous.
+// L'envoi passe par EmailJS (gratuit jusqu'à 200 e-mails par mois), depuis le Gmail de Mirabois.
+// Deux modèles, réglés dans le tableau de bord EmailJS (sources dans _modeles/emails) :
+//  - template_demande      : la demande complète, envoyée à mirabois.construction@gmail.com
+//  - template_confirmation : la confirmation envoyée au visiteur
 const ADRESSE = 'mirabois.construction@gmail.com';
-const ENVOI = `https://formsubmit.co/ajax/${ADRESSE}`;
+const EMAILJS = {
+  api: 'https://api.emailjs.com/api/v1.0/email/send',
+  service: 'service_mirabois',
+  cle: 't3TgFdujsz0QfTNZE', // clé publique : elle est faite pour être visible dans le site
+};
 const form = document.getElementById('formulaire');
 const etapes = [...form.querySelectorAll('.etape-form')];
 const btnPrec = document.getElementById('precedent');
@@ -124,42 +130,15 @@ function etapeValide() {
 }
 btnPrec.addEventListener('click', () => afficherEtape(etape - 1));
 
-// E-mail de confirmation envoyé au visiteur (texte simple : FormSubmit n'accepte pas la mise en page)
-function confirmation(d) {
-  const trait = '━━━━━━━━━━━━━━━━━━━━━━━━';
-  const ligne = (titre, valeur) => (valeur ? `   •  ${titre} : ${valeur}` : null);
-  const recap = [
-    ligne('Projet', d.get('type')),
-    ligne('Nature', d.get('nature')),
-    ligne('Commune', d.get('ville')),
-    ligne('Budget indiqué', d.get('budget')),
-  ].filter(Boolean).join('\n');
-  return [
-    `Bonjour ${d.get('nom')},`,
-    '',
-    'Merci pour votre confiance : votre demande est bien arrivée.',
-    '',
-    trait,
-    'VOTRE DEMANDE',
-    trait,
-    recap,
-    '',
-    trait,
-    'LA SUITE',
-    trait,
-    '   1.  Je vous recontacte, en général sous 48 heures, pour échanger sur votre projet.',
-    '   2.  Nous convenons ensemble d\'une visite pour voir les lieux et prendre les mesures.',
-    '   3.  Vous recevez un devis détaillé, poste par poste, avec le choix des bois expliqué.',
-    '',
-    'Une question d\'ici là ? Appelez-moi au 06 51 91 78 61 ou écrivez-moi à mirabois.construction@gmail.com.',
-    '',
-    'À très bientôt,',
-    '',
-    'Yanis Mira',
-    'Charpentier · Mirabois Construction',
-    'Charpente et construction bois · Yvelines, Val-d\'Oise, Paris',
-    '06 51 91 78 61  ·  https://mirabois.fr',
-  ].join('\n');
+// Envoie un e-mail à partir d'un modèle EmailJS
+async function envoyerModele(modele, params, signal) {
+  const rep = await fetch(EMAILJS.api, {
+    method: 'POST',
+    signal,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ service_id: EMAILJS.service, template_id: modele, user_id: EMAILJS.cle, template_params: params }),
+  });
+  if (!rep.ok) throw new Error(`${rep.status} ${await rep.text().catch(() => '')}`);
 }
 let envoiEnCours = false;
 form.addEventListener('submit', async (e) => {
@@ -172,39 +151,33 @@ form.addEventListener('submit', async (e) => {
   btnSuiv.textContent = 'Envoi en cours…';
   msg.textContent = '';
   const sujet = `Demande de devis : ${d.get('type')}, ${d.get('nature').toLowerCase()} (${d.get('nom')})`;
-  const champs = {
-    Nom: d.get('nom'),
-    email: d.get('email'), // ce nom exact permet à FormSubmit d'envoyer la confirmation au visiteur
-    'Téléphone': d.get('tel') || '—',
-    Commune: d.get('ville') || '—',
-    'Neuf ou rénovation': d.get('nature'),
-    Projet: d.get('type'),
-    Message: d.get('message'),
-    'Budget approximatif': d.get('budget'),
+  const params = {
+    nom: d.get('nom'),
+    email: d.get('email'),
+    telephone: d.get('tel') || '—',
+    commune: d.get('ville') || '—',
+    nature: d.get('nature'),
+    projet: d.get('type'),
+    message: d.get('message'),
+    budget: d.get('budget'),
   };
-  // Le service d'envoi peut mettre 20 à 40 secondes : on rassure le visiteur et on patiente jusqu'à 90 s
+  const champs = {
+    Nom: params.nom, 'E-mail': params.email, 'Téléphone': params.telephone, Commune: params.commune,
+    'Neuf ou rénovation': params.nature, Projet: params.projet, Message: params.message, 'Budget approximatif': params.budget,
+  };
+  // En principe l'envoi prend quelques secondes ; on rassure quand même si cela traîne
   const patience = setTimeout(() => {
-    msg.textContent = "Envoi en cours, merci de patienter : cela peut prendre jusqu'à une minute. Ne fermez pas la page.";
+    msg.textContent = 'Envoi en cours, merci de patienter quelques instants…';
   }, 4000);
   const delai = new AbortController();
-  const minuterie = setTimeout(() => delai.abort(), 90000);
+  const minuterie = setTimeout(() => delai.abort(), 45000);
   try {
-    const rep = await fetch(ENVOI, {
-      method: 'POST',
-      signal: delai.signal,
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({
-        _subject: sujet,
-        _replyto: d.get('email'),
-        _template: 'table',
-        _captcha: 'false',
-        _honey: d.get('_honey') || '',
-        _autoresponse: confirmation(d),
-        ...champs,
-      }),
-    });
-    const res = await rep.json().catch(() => ({}));
-    if (!rep.ok || String(res.success) !== 'true') throw new Error(res.message || rep.status);
+    // Champ piège rempli = robot : on fait comme si tout allait bien, sans rien envoyer
+    if (!d.get('_honey')) {
+      await envoyerModele('template_demande', params, delai.signal);
+      // La confirmation au visiteur ne doit pas faire échouer la demande si elle a un souci
+      await envoyerModele('template_confirmation', params, delai.signal).catch(() => {});
+    }
     // Confirmation : on remplace le formulaire par un message de remerciement
     etapes.forEach((f) => { f.hidden = true; });
     form.querySelector('.form-pied').hidden = true;
